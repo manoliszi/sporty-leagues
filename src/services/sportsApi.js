@@ -15,7 +15,6 @@ export async function fetchAllLeagues() {
 export async function fetchSeasonBadge(id) {
     try { 
         const response = await axios.get(`${API_BASE}/search_all_seasons.php?badge=1&id=${id}`)
-        console.log(response.data.seasons?.[0])
         return response.data.seasons?.[0]
     } catch (e) {
         console.error(e)
